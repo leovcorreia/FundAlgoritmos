@@ -8,7 +8,6 @@ int main() {
 
     printf("Digite uma palavra: ");
     fgets(palavra, 30, stdin);
-    //scanf("%s", palavra);
 
     tam = strlen(palavra) - 1;
     // tam = strlen(palavra);
