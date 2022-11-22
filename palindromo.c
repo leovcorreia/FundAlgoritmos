@@ -10,7 +10,7 @@ int main() {
     fgets(palavra, 30, stdin);
 
     tam = strlen(palavra) - 1;
-    // tam = strlen(palavra);
+    // tam = tamanho real da palavra;
     printf("Tamanho da string: %d\n", tam);
 
     invertePalavra[tam] = '\0';
