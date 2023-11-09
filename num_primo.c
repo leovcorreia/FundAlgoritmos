@@ -1,28 +1,34 @@
 #include <stdio.h>
 
-int main () {
+int verificaPrimo(int num) {
 
-    int num, i, result;
-
-    printf("Digite o numero: ");
-    scanf("%d", &num);
+    int i;
 
     if (num <= 1) {
-        result = 0; /*Não é primo*/
+        return 0; /*Não é primo*/
     } else {
         for (i = 2; i * i <= num; i++) {
             if (num % i == 0) {
-                result = 0; /*Não é primo*/
-            } else {
-                result = 1;
+                return 0; /*Não é primo*/
             }
         } 
     }
 
-    if (result == 0) {
-        printf("O numero %d nao eh primo! ", num);
+    return 1; // Se não encontrar nenhum divisor, número é primo
+}
+
+int main () {
+
+    int num;
+
+    printf("Digite o numero: ");
+    scanf("%d", &num);
+
+    if (verificaPrimo(num)) {
+        printf("O numero %d eh primo!", num);
     } else {
-        printf("O numero %d eh primo! ", num);
+        printf("O numero %d nao eh primo!", num);
     }
-    
+
+    return 0;    
 }
